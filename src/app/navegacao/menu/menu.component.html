@@ -1,7 +1,19 @@
 <mat-toolbar color="primary">
   <span>Simple Dental</span>
   <span class="spacer"></span>
-  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" mat-button>{{nomeUsuario}} • {{emaillUsuario}}</button>
-  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" [routerLink]="['/albums-list']" mat-button>Albums</button>
-  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" (click)="logout()" mat-button>Sair</button>
+  <span class="hide-mobile" *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado">{{nomeUsuario}} •
+    {{emaillUsuario}}</span>
+
+  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" mat-button [matMenuTriggerFor]="afterMenu">
+    <span class="material-icons">
+      menu
+    </span>
+  </button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button [routerLink]="['/albums-list']" mat-menu-item>Álbuns</button>
+    <button (click)="logout()" mat-menu-item><span class="material-icons">
+        logout
+      </span></button>
+  </mat-menu>
+
 </mat-toolbar>

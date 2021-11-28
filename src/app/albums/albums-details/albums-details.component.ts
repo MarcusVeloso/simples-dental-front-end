@@ -11,6 +11,7 @@ import { AlbumService } from '../services/album.service';
 export class AlbumsDetailsComponent implements OnInit {
 
   photosList: Photograph[] = [];
+  albumTitulo: string;
 
   constructor(private albumService: AlbumService,
     private route: ActivatedRoute) { }
@@ -18,6 +19,13 @@ export class AlbumsDetailsComponent implements OnInit {
   ngOnInit(): void {
 
     let id = this.route.snapshot.url[1].path;
+
+    this.albumService.obterAlbumPorId(id)
+      .subscribe(
+        album => {
+          this.albumTitulo = album[0].title;
+        });
+
     this.albumService.obterPhotosPorId(id)
       .subscribe(
         photo => {

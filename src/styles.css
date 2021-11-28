@@ -1,4 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+.mat-card-title-group>div>.mat-card-title {
+  display: flex;
+  justify-content: left;
+  margin-top: 30px;
+}
+
+app-albums-list>div>.mat-card-title,
+app-albums-details>div>.mat-card-title{
+  padding-bottom: 20px;
+}
+
+.mat-card-subtitle,
+.mat-card-subtitle{
+  padding-top: 5px;
+  text-transform: capitalize;
+}
+
+p {
+  text-transform: capitalize;
+}
+
+.mat-card {
+  margin-bottom: 5px;
+}
+
+.mat-card:hover{
+  transform: scale(1.01);
+	box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.06);
+}
+
+img {
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.06);
+}

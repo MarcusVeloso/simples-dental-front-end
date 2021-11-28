@@ -28,5 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Install Angular Material
 $ ng add @angular/material
-
 https://material.angular.io/
+
+### ts-md5
+$ npm i ts-md5 --save
+https://www.npmjs.com/package/ts-md5

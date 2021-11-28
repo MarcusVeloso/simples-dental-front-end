@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { MenuComponent } from './navegacao/menu/menu.component';
 import { LoginComponent } from './autenticacao/login/login.component';
@@ -47,7 +48,8 @@ import { AutenticacaoGuard } from './services/autenticacao.guard';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
 
   ],
   providers: [

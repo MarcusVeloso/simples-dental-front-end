@@ -22,7 +22,7 @@ export class AlbumsListComponent implements OnInit {
         photo => {
           this.photosList = photo;
 
-          this.albumService.obterTodosAlbuns()
+          this.albumService.obterTodosAlbums()
             .subscribe(album => {
               this.albumList = album;
 

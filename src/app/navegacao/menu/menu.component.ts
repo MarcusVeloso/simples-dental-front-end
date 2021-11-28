@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { Observable } from 'rxjs';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { LocalStorageUtils } from 'src/app/utils/localStorage';
@@ -9,6 +10,8 @@ import { LocalStorageUtils } from 'src/app/utils/localStorage';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
+  @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
 
   ehUsuarioLogado$: Observable<boolean>;
   localStorage = new LocalStorageUtils()

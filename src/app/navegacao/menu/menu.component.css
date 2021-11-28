@@ -3,5 +3,30 @@
 }
 
 mat-toolbar{
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+
+.mat-button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: center;
+  }
+
+.mat-menu-item{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-align: left;
+}
+
+.hide-mobile {
+  font-size: 14px;
+}
+
+@media (max-width: 700px){
+  .hide-mobile{
+    display: none !important;
+  }
 }

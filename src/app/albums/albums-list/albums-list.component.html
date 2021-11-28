@@ -1,8 +1,11 @@
 <div class="container">
+  
+  <mat-card-title>Lista de álbuns</mat-card-title>
+
   <mat-card class="card" *ngFor="let album of albumList">
     <mat-card-title-group [routerLink]="['/albums-details', album.id]">
-      <mat-card-title>{{album.title}}</mat-card-title>
       <img mat-card-sm-image src="{{album.folder}}" >
+      <mat-card-title>{{album.title}}</mat-card-title>
     </mat-card-title-group>
   </mat-card>
 </div>

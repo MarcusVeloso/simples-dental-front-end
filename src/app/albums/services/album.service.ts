@@ -10,9 +10,14 @@ export class AlbumService extends BaseService {
 
   constructor(private http: HttpClient) { super(); }
 
-  obterTodosAlbuns(): Observable<Album[]>{
+  obterTodosAlbums(): Observable<Album[]>{
     return this.http
                .get<Album[]>(this.UrlAPIV1 + 'albums');
+  }
+
+  obterAlbumPorId(id:string): Observable<Album>{
+    return this.http
+               .get<Album>(this.UrlAPIV1 + 'albums?id=' + id);
   }
 
   obterPhotos(): Observable<Photograph[]>{
@@ -20,8 +25,8 @@ export class AlbumService extends BaseService {
                .get<Photograph[]>(this.UrlAPIV1 + 'photos');
   }
 
-  obterPhotosPorId(id:string): Observable<Photograph[]>{
+  obterPhotosPorId(albumid:string): Observable<Photograph[]>{
     return this.http
-               .get<Photograph[]>(this.UrlAPIV1 + 'photos?albumId=' + id);
+               .get<Photograph[]>(this.UrlAPIV1 + 'photos?albumId=' + albumid);
   }
 }
