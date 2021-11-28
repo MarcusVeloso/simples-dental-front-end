@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BaseService {
 
-  constructor() { }
+  protected UrlAPIV1: string = environment.urlAPIv1;
+
+  protected extrairData(response: any){
+    return response;
+  }
 }

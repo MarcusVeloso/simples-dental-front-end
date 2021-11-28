@@ -1,1 +1,8 @@
-<p>albums-details works!</p>
+<div class="container">
+  <mat-card class="card" *ngFor="let photograph of photosList | slice:0:10;">
+    <mat-card-title-group>
+      <img mat-card-sm-image src="{{photograph.thumbnailUrl}}">
+      <mat-card-title>{{photograph.title}}</mat-card-title>
+    </mat-card-title-group>
+  </mat-card>
+</div>
