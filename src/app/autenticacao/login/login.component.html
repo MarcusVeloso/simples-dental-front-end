@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div class="container text-center">
+
+  <h3>Login</h3>
+
+  <form (ngSubmit)="logar()">
+
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput [formControl]="emailFormControl" placeholder="E-mail">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Informe um e-mail <strong>válido!</strong>
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Campo e e-mail é <strong>obrigatório!</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <br>
+
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]="passwordFormControl">
+        <mat-error *ngIf="passwordFormControl.hasError('password') && !passwordFormControl.hasError('required')">
+          Please enter a valid password address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Informe um e-mail <strong>válido!</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <div>
+      <button mat-raised-button color="primary">Logar</button>
+    </div>
+  </form>
+  <div>
+    <button mat-button [routerLink]="['/registrar']" color="primary">Registrar</button>
+  </div>
+
+</div>

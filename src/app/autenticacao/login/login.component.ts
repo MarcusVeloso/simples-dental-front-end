@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
+import { Credenciais } from '../models/credenciais';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  passwordFormControl = new FormControl('', [Validators.required, Validators.email]);
 
-  ngOnInit(): void {
+  constructor(private autenticacaoService: AutenticacaoService) { }
+
+  ngOnInit(): void { }
+
+  logar() {
+    if (this.emailFormControl.valid && this.passwordFormControl.valid) {
+
+      let credenciais: Credenciais;
+      
+      credenciais =
+      {
+        email: this.emailFormControl.value,
+        password: this.passwordFormControl.value
+      };
+
+      this.autenticacaoService.login(credenciais);
+    }
   }
-
 }

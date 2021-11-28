@@ -1,1 +1,51 @@
-<p>registrar works!</p>
+<div class="container text-center">
+
+  <h3>Registrar usuário</h3>
+
+  <form (ngSubmit)="registrar()">
+
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input type="text" matInput [formControl]="nomeFormControl" placeholder="Nome">
+        <mat-error *ngIf="nomeFormControl.hasError('required')">
+          Campo Nome é <strong>obrigatório!</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <br>
+
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input type="email" matInput [formControl]="emailFormControl" placeholder="E-mail">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Informe um E-mail <strong>válido!</strong>
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Campo E-mail é <strong>obrigatório!</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <br>
+
+    <form class="form">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [formControl]="passwordFormControl">
+        <mat-error *ngIf="passwordFormControl.hasError('required')">
+          Campo Senha é <strong>obrigatório!</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <div class="button-row">
+      <button mat-raised-button color="primary">Registrar</button>
+      <button mat-raised-button color="warn" [routerLink]="['/login']">Login</button>
+    </div>
+
+  </form>
+
+</div>

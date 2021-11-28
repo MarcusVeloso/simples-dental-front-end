@@ -1,8 +1,7 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
   <span>Simple Dental</span>
   <span class="spacer"></span>
-  <button [routerLink]="['/albums-list']" mat-button>Albums</button>
+  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" mat-button>{{nomeUsuario}} • {{emaillUsuario}}</button>
+  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" [routerLink]="['/albums-list']" mat-button>Albums</button>
+  <button *ngIf="ehUsuarioLogado$ | async as ehUsuarioLogado" (click)="logout()" mat-button>Sair</button>
 </mat-toolbar>
