@@ -1,6 +1,6 @@
 import { AppAlbumsPage } from "./app.album.po"
 
-describe('Teste Lista de Álbums', () => {
+describe('Teste Lista de Álbuns', () => {
   let page: AppAlbumsPage;
 
   beforeEach(() => {

@@ -1,35 +1,49 @@
-# SimplesDentalFrontEnd
+# Simples Dental Front-End
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
+Project front-end Angular para a API [jsonplaceholder](https://jsonplaceholder.typicode.com/) e gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.12.
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+$ npm install
+````
 
-## Code scaffolding
+### Pacotes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular Material](https://material.angular.io/).
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-### Install Angular Material
+```
 $ ng add @angular/material
-https://material.angular.io/
+```
 
-### ts-md5
+- [ts-md5](https://www.npmjs.com/package/ts-md5)
+
+```
 $ npm i ts-md5 --save
-https://www.npmjs.com/package/ts-md5
+```
+
+## Executando testes e2e
+
+### Teste de autenticação
+* deve estar na página registrar
+* deve registrar usuário
+* deve estar na página Login
+* deve realizar login
+
+### Teste Lista de Álbuns
+* deve estar na página lista de álbuns
+* deve retornar primeiro item da lista de álbuns
+* deve existir uma imagem no item da lista
+
+### Teste Detalhes do Álbum
+* deve retornar título da página detalhes álbuns
+* deve retornar o título do álbuns
+* deve retornar o décimo item da lista de fotos
+
+Para executar os testes de ponta a ponta via [Protractor](http://www.protractortest.org/).
+```
+$ ng e2e
+``` 
+
+### Dev
+Marcus Veloso
