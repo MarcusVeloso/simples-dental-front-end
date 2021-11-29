@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { Observable } from 'rxjs';
-import { AutenticacaoService } from 'src/app/services/autenticacao.service';
+import { AutenticacaoService } from 'src/app/autenticacao/services/autenticacao.service';
 import { LocalStorageUtils } from 'src/app/utils/localStorage';
 
 @Component({

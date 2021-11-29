@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { Credenciais } from '../autenticacao/models/credenciais';
-import { Usuario } from '../autenticacao/models/usuario';
-import { LocalStorageUtils } from '../utils/localStorage';
+import { LocalStorageUtils } from 'src/app/utils/localStorage';
+import { Credenciais } from '../models/credenciais';
+import { Usuario } from '../models/usuario';
 
 @Injectable()
 export class AutenticacaoService {
@@ -19,7 +19,6 @@ export class AutenticacaoService {
 
   registrar(usuario: Usuario) {
     this.localStorage.registrarUsuario(usuario);
-    this.usuarioLogado.next(true);
     this.navegarParaLogin();
   }
 

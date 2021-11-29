@@ -1,14 +1,13 @@
 <div class="container">
 
-  <mat-card-title class="titulo">Detalhes do álbum
-    <mat-card-subtitle class="titulo">{{albumTitulo}} </mat-card-subtitle>
-  </mat-card-title>
+  <mat-card-title class="titulo">Detalhes do álbum</mat-card-title>
+  <mat-card-subtitle class="titulo">{{albumTitulo}} </mat-card-subtitle>
 
 
   <div class="row">
     <div class="col-sm-4" *ngFor="let photograph of photosList | slice:0:10;">
       <mat-card class="card">
-        <img mat-card-image src="{{photograph.url}}">
+        <img mat-card-image id="{{photograph.id}}" src="{{photograph.url}}">
       </mat-card>
     </div>
   </div>

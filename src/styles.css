@@ -20,17 +20,17 @@ app-albums-details>div>.mat-card-title{
   text-transform: capitalize;
 }
 
+.mat-form-field{
+  margin-top: 10px;
+}
+
 p {
   text-transform: capitalize;
 }
 
 .mat-card {
+  text-transform: capitalize;
   margin-bottom: 5px;
-}
-
-.mat-card:hover{
-  transform: scale(1.01);
-	box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.06);
 }
 
 img {

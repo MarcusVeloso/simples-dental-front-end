@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { AutenticacaoService } from 'src/app/services/autenticacao.service';
+import { AutenticacaoService } from 'src/app/autenticacao/services/autenticacao.service';
 import { Credenciais } from '../models/credenciais';
 
 @Component({
