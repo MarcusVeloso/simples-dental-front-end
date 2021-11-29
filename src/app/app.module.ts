@@ -21,8 +21,8 @@ import { AlbumsListComponent } from './albums/albums-list/albums-list.component'
 import { AlbumsDetailsComponent } from './albums/albums-details/albums-details.component';
 
 import { AlbumService } from './albums/services/album.service';
-import { AutenticacaoService } from './services/autenticacao.service';
-import { AutenticacaoGuard } from './services/autenticacao.guard';
+import { AutenticacaoService } from './autenticacao/services/autenticacao.service';
+import { AutenticacaoGuard } from './autenticacao/services/autenticacao.guard';
 
 @NgModule({
   declarations: [

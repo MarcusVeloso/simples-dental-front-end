@@ -4,7 +4,7 @@ import { AlbumsDetailsComponent } from './albums/albums-details/albums-details.c
 import { AlbumsListComponent } from './albums/albums-list/albums-list.component';
 import { LoginComponent } from './autenticacao/login/login.component';
 import { RegistrarComponent } from './autenticacao/registrar/registrar.component';
-import { AutenticacaoGuard } from './services/autenticacao.guard';
+import { AutenticacaoGuard } from './autenticacao/services/autenticacao.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'registrar', component: RegistrarComponent },
 
   { path: 'albums-list', component: AlbumsListComponent, canActivate: [AutenticacaoGuard] },
-  { path: 'albums-details/:id', component: AlbumsDetailsComponent, canActivate: [AutenticacaoGuard] },
+  { path: 'albums-details/:id', component: AlbumsDetailsComponent, canActivate: [AutenticacaoGuard] },  
 ];
 
 @NgModule({
